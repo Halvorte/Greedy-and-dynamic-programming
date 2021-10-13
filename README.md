@@ -4,7 +4,7 @@ School project. Not complete
 
 # IKT301 Greedy and dynamic programming
 Date due: See Canvas 
-# Make the necessary assumptions (which may include reducing the size of the data). 
+## Make the necessary assumptions (which may include reducing the size of the data). 
 For the first and second problems, use the Basic World Cities Database. It can be downloaded for free here: https://simplemaps.com/data/world-cities.
 For the third and fourth problems, there is no need for external data. 
 For the fifth problem, use the P08 dataset from John Burkart. It can be downloaded for free here: https://people.sc.fsu.edu/~jburkardt/datasets/knapsack_01/knapsack_01.html. 
