@@ -23,7 +23,6 @@ def random_job_generation():
 # Funciton to assign jobs to the latest possible slot.
 def assign_jobs(sorted_jobs):
     schedule = [None] * 41
-    print(schedule)
 
     for i in sorted_jobs:
         deadline = i['Deadline']
@@ -43,20 +42,19 @@ def assign_jobs(sorted_jobs):
             print(k)
             profit += k['Profit']
 
-    print(profit)
-    print(schedule)
+    print(f'Total profit: {profit}')
+    #print(schedule)
 
 
 
 if __name__ == '__main__':
-    print("yo")
     # Getting the jobs
     jobs = random_job_generation()
-    print(jobs)
+    #print(jobs)
 
     # Sort jobs in order of profit
     sorted_jobs = sorted(jobs, key=lambda x: x['Profit'], reverse=True)
-    print(sorted_jobs)
+    #print(sorted_jobs)
 
     # Assign the jobs to a timeslot and print all the jobs
     assign_jobs(sorted_jobs)
