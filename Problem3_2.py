@@ -6,10 +6,10 @@ In this assignment, you should make a lossless compressor using Huffman coding. 
 2.  Huffman coding with variable size encoding The compressed text should include the characters (assume ASCII), codes, and the message.
 '''
 
+# Variable size encoding
+
 # Class for tree node
 import queue
-
-
 class Node:
 
     def __init__(self, letter, freq):
