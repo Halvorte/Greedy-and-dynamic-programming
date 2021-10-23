@@ -54,17 +54,22 @@ def to_code(string, letters):
 
     return code
 
+
 # Function to convert binary code to string
 def to_string(binary, letters):
     strng = []
     to_translate = []
+    n = 5
 
-    for j in range(0,7):
-        
+    for j in range(0, len(binary), n):
+        to_translate.append(binary[j : j + n])
+    print(to_translate)
 
-    for i in letters:
-        if binary[0,7] == letters['Fixed Code']:
-            strng.append(letters['Letter'])
+    for i in to_translate:
+        for k in letters:
+            if i == k['Fixed Code']:
+                strng.append(k['Letter'])
+
     return strng
 
 
@@ -82,5 +87,6 @@ if __name__ == '__main__':
 
     # convert binary code to string
     word = to_string('011110010010001', letters)
+    print(word)
 
 
