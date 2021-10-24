@@ -82,7 +82,7 @@ def items_in_sack(items, sack_size):
 
 if __name__ == '__main__':
     # Size of sack
-    file3 = open('dataKnapsack/p08_p.txt', 'r')
+    file3 = open('dataKnapsack/p08_c.txt', 'r')
     capacity = file3.readline()
     file3.close()
     sack_size = int(capacity)
