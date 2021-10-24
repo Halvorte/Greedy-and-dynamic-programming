@@ -102,6 +102,38 @@ def print_tree(node): #, #val=''):
         print(f'{node.letter} | {node.freq} | {newVal}')
 
 
+# Function to find path from every end node to root. Then find huffman code for each letter.
+def find_path(node, sorted_symbols):
+    arr = []
+
+    for i in sorted_symbols:
+
+        # Run funciton to find the path from root to i/given node
+
+        if has_path(node, arr, i[0]):
+            for j in range(len(arr) - 1):
+                print(arr[j], end="->")
+            print(arr[len(arr) - 1])
+
+        else:
+            print("No Path")
+
+
+
+def has_path(root, arr, x):
+
+    if root is None:
+        return False
+
+    arr.append(root.direction)
+
+    if root.letter == x:
+        return True
+
+    if has_path(root.left, arr, x) or has_path(root.right, arr, x):
+        return True
+
+
 
 if __name__ == '__main__':
     # String consisting of all the letters in the norwegian alphabet
@@ -113,6 +145,7 @@ if __name__ == '__main__':
     # Create the Huffman tree
     treeRoot = huffman_tree(sorted_symbols)
 
+    find_path(treeRoot, sorted_symbols)
 
     # Print the tree given the root node
     print_tree(treeRoot)

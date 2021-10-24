@@ -63,7 +63,7 @@ def to_string(binary, letters):
 
     for j in range(0, len(binary), n):
         to_translate.append(binary[j : j + n])
-    print(to_translate)
+    #print(to_translate)
 
     for i in to_translate:
         for k in letters:
@@ -83,10 +83,10 @@ if __name__ == '__main__':
 
     # Function to convert string to huffman code
     code = to_code('HALLO', letters)
-    print(code)
+    print(f'Binary code from string: {code}')
 
     # convert binary code to string
     word = to_string('011110010010001', letters)
-    print(word)
+    print(f'Word from binary code: {word}')
 
 
